@@ -1,0 +1,16 @@
+# Metadata schema
+
+DataCite and DCMI both provide well-established metadata scheme.
+
+DataCite provides the schema definition in XSD format at https://schema.datacite.org/meta/kernel-4.4/metadata.xsd.
+
+For visualization, use [xsdvi](https://sourceforge.net/projects/xsdvi/) as follows:
+
+```
+mkdir -p vis
+cd vis
+curl https://schema.datacite.org/meta/kernel-4.4/metadata.xsd > datacite_metadata_schema_v4.4.xsd
+java -jar /path/to/xsdvi/dist/lib/xsdvi.jar datacite_metadata_schema_v4.4.xsd
+```
+
+The generated `datacite_metadata_schema_v4.4.svg` can be explored with a browser.

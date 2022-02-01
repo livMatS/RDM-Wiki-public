@@ -1,0 +1,7 @@
+---
+title: dtool Best Practices
+subtitle: on a dtool testing playground
+author: Johannes L. Hörmann, Lars Pastewka
+linkcolor: blue
+...
+---

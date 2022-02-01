@@ -1,0 +1,134 @@
+# source:
+# - https://evilmartians.com/chronicles/build-images-on-github-actions-with-docker-layer-caching
+# - https://github.com/docker/build-push-action/blob/master/docs/advanced/share-image-jobs.md
+# - https://betterprogramming.pub/sharing-cached-layer-between-docker-and-docker-compose-builds-c2e5f751cee4
+# - https://github.com/crazy-max/ghaction-docker-buildx#leverage-buildx-cache
+# - https://www.freecodecamp.org/news/where-are-docker-images-stored-docker-container-paths-explained/
+# - https://testdriven.io/blog/faster-ci-builds-with-docker-cache/
+#
+# TODO: cache images
+#   see https://about.gitlab.com/blog/2020/10/30/mitigating-the-impact-of-docker-hub-pull-requests-limits/
+name: build-dtool-pdf
+
+env:
+  image: "livmats/pandoc-builder"
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - 'v*'
+
+  pull_request:
+    branches:
+      - master
+
+jobs:
+
+  build-pdf:
+    runs-on: ubuntu-20.04
+
+    steps:
+
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    # 2021-12-01: as of today, root on host maps to runner in workflow, evoking user on host maps to runneradmin
+    #             group docker in workflow maps back to gtoup input on host
+    #             user runner in workflow maps back to uid 1001 on host
+    - name: Docker socket permissions for local testing with act
+      run: |
+        # the following line allows testing locally with act (https://github.com/nektos/act),
+        # i.e. by running
+        #   act -W .github/workflows/test.yml --bind
+        # from within this repository's root directory (see README for more information).
+        whoami
+        ls -lha /var/run/docker.sock
+        sudo chown runner:runner /var/run/docker.sock
+        sudo chown -R runner:runner .
+        # see https://github.com/nektos/act/issues/724#issuecomment-855390956
+        sudo chown -R runner /var/run/act
+      if: ${{ env.ACT }}
+
+    - name: Docker meta
+      id: docker_meta
+      uses: crazy-max/ghaction-docker-meta@v3.6.1
+      with:
+        images: ${{ env.image }}
+        flavor: |
+          latest=true
+        tags: |
+          type=raw,value=sha-${{ github.sha }}
+          type=sha
+
+    - name: Set up docker buildx
+      uses: docker/setup-buildx-action@v1
+
+    - name: Cache docker layers
+      uses: actions/cache@v2
+      env:
+        cache-name: cache-docker-layers
+      with:
+        path: /tmp/.buildx-cache
+        key: ${{ runner.os }}-buildx-${{ env.cache-name }}
+        restore-keys: |
+          ${{ runner.os }}-buildx-${{ env.cache-name }}
+      if: ${{ !env.ACT }}
+
+    - name: Build
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        file: ./container/builder/Dockerfile
+        platforms: linux/amd64
+        tags: ${{ steps.docker_meta.outputs.tags }}
+        labels: ${{ steps.docker_meta.outputs.labels }}
+        outputs: type=docker
+        cache-from: type=local,src=/tmp/.buildx-cache
+        cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
+        # This ugly bit is necessary if you don't want your cache to grow forever
+        # till it hits GitHub's limit.
+        # https://github.com/docker/build-push-action/issues/252
+        # https://github.com/moby/buildkit/issues/1896
+
+    - name: Image digest
+      run: echo ${{ steps.docker_build.outputs.digest }}
+
+    - name: Move layer cache
+      run: |
+        rm -rf /tmp/.buildx-cache
+        mv /tmp/.buildx-cache-new /tmp/.buildx-cache
+      if: ${{ !env.ACT }}
+
+    - name: Get template
+      run: |
+        cd ./rdm/dtool/template
+        bash ./get_template.sh
+
+    - name: Build PDF
+      run: |
+        cd ./rdm/dtool
+        # configure container as pandoc builder
+        make PANDOC="docker run -v $(pwd):$(pwd) -w $(pwd) ${{ env.image }}" pdf
+
+    - name: Upload artifact
+      if: ${{ !env.ACT }}
+      uses: actions/upload-artifact@v2
+      with:
+        name: dtool-pdf
+        path: rdm/dtool/build/output.pdf
+
+    - name: Make release
+      if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
+      uses: softprops/action-gh-release@v1
+      with:
+        files: rdm/dtool/build/output.pdf
+        draft: true
+
+    - name: Reset docker socket permissions after local testing with act
+      if: ${{ env.ACT }}
+      run: |
+        sudo chown runner:runner /var/run/docker.sock
+        sudo chown -R runneradmin:runneradmin .
+

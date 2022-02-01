@@ -1,0 +1,15 @@
+project: Project name
+description: Short description
+owners:
+  - name: {DTOOL_USER_FULL_NAME}
+    email: {DTOOL_USER_EMAIL}
+    username: {username}
+    orcid: Please obtain an ORCID at orcid.org
+funders:
+  - organization: Deutsche Forschungsgemeinschaft (DFG)
+    program: Clusters of Excellence
+    code: EXC 2193
+creation_date: '{date}'
+expiration_date: '{date}'
+derived_from:
+  - uuid: UUID of the primary data or the previous simulation step
