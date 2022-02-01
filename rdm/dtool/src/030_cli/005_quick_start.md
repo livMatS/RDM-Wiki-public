@@ -132,8 +132,7 @@ in the official docs.
 
 ### What's next
 
-For access to the testing server, read [TODO](TODO)  
-and how to configure `dtool` accordingly for [S3 storage access](022_configuration_endpoint_s3.md),
+For access to the testing server, read how to configure `dtool` accordingly for [S3 storage access](022_configuration_endpoint_s3.md),
  [Windows share access](023_configuration_endpoint_smb.md)
 and [lookup server access](024_configuration_lookup_server.md).
 
@@ -144,7 +143,7 @@ object storage, i.e. with
 dtool cp my-first-dataset s3://test-bucket
 ```
 
-or to the testing Windows share, i.e. with
+or to the testing smb share, i.e. with
 
 ```bash
 dtool cp my-first-dataset smb://test-share
