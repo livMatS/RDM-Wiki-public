@@ -59,7 +59,7 @@ dtool config user name "Your Full Name"
 dtool config user email "your@email.com"
 ```
 
-Also, download [this metadata template](samples/dtool_readme.yml)
+Also, download [this metadata template](../../samples/dtool_readme.yml)
 and place it at `~/.dtool_readme.yml`. Configure `dtool` to use it with
 
 ```bash
