@@ -1,6 +1,7 @@
 ## dtool datasets
 
 A _dataset_ is a collection of files that belong together logically. For example, this could be...
+
 * ...raw data recorded in a measurement.
 * ...input files for a simulation and the output of that simulation.
 * ...the LaTeX manuscript of a paper, the raw data underlying that paper and the scripts required to plot that data.

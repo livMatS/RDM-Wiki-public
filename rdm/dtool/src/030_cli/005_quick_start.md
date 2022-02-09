@@ -34,7 +34,7 @@ Install with
 pip install dtool
 ```
 
-For working with the *liv*MatS-wide repository, you will also need
+For working with the testing repository, you will also need
 
 ```bash
 pip install dtool-s3
