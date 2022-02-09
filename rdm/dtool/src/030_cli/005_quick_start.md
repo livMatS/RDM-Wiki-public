@@ -121,7 +121,7 @@ frozen_at: 2021-12-01
 
 Above, you see a *UUID* `055e2506-6723-45bd-a3f3-1a69e318ec87` assigned to the
 freshly created dataset. This is an important concept. No matter how your dataset is stored,
-how its moved around, or how many copies of it are created, this *Universally Unique IDentifier* will stay 
+how it's moved around, or how many copies of it are created, this *Universally Unique IDentifier* will stay 
 with your dataset over its whole lifetime. No other dataset will ever own the same UUID.
 It hence serves as a [persistent identifier](https://en.wikipedia.org/wiki/Persistent_identifier),
 an important building block for implementing the [FAIR principles](https://doi.org/10.1038/sdata.2016.18) [^1].
