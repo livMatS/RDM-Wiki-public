@@ -14,15 +14,7 @@ env:
   image: "livmats/pandoc-builder"
 
 on:
-  push:
-    branches:
-      - master
-    tags:
-      - 'v*'
-
-  pull_request:
-    branches:
-      - master
+  workflow_call:
 
 jobs:
 
@@ -118,13 +110,6 @@ jobs:
       with:
         name: dtool-pdf
         path: rdm/dtool/build/output.pdf
-
-    - name: Make release
-      if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
-      uses: softprops/action-gh-release@v1
-      with:
-        files: rdm/dtool/build/output.pdf
-        draft: true
 
     - name: Reset docker socket permissions after local testing with act
       if: ${{ env.ACT }}
