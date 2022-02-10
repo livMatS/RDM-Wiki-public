@@ -6,7 +6,7 @@ Add the S3 account details for the `test-bucket` bucket using the format below t
 {
   "DTOOL_S3_ACCESS_KEY_ID_test-bucket": "testuser_access_key",
   "DTOOL_S3_DATASET_PREFIX": "u/testuser/",
-  "DTOOL_S3_ENDPOINT_test-bucket": "http://10.20.49.250:9000",
+  "DTOOL_S3_ENDPOINT_test-bucket": "http://132.230.223.113:9000",
   "DTOOL_S3_SECRET_ACCESS_KEY_test-bucket": "testuser_secret_key",
 }
 ```
@@ -17,14 +17,14 @@ If properly set up, the `dtool.json` file should also contain other keys like `D
 
 ```json
 {
-  "DTOOL_LOOKUP_SERVER_TOKEN_GENERATOR_URL": "https://10.20.49.250:5001/token",
-  "DTOOL_LOOKUP_SERVER_URL": "https://10.20.49.250:5000",
+  "DTOOL_LOOKUP_SERVER_TOKEN_GENERATOR_URL": "https://132.230.223.113:5001/token",
+  "DTOOL_LOOKUP_SERVER_URL": "https://132.230.223.113:5000",
   "DTOOL_LOOKUP_SERVER_USERNAME": "testuser",
   "DTOOL_LOOKUP_SERVER_VERIFY_SSL": "false",
 
   "DTOOL_S3_ACCESS_KEY_ID_test-bucket": "testuser_access_key",
   "DTOOL_S3_DATASET_PREFIX": "u/testuser/",
-  "DTOOL_S3_ENDPOINT_test-bucket": "http://10.20.49.250:9000",
+  "DTOOL_S3_ENDPOINT_test-bucket": "http://132.230.223.113:9000",
   "DTOOL_S3_SECRET_ACCESS_KEY_test-bucket": "testuser_secret_key",
   
   "DTOOL_README_TEMPLATE_FPATH": "/path/to/.dtool_readme.yml",

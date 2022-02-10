@@ -7,7 +7,7 @@ Add the account details for the `test-share` Windows (smb) share using the forma
   "DTOOL_SMB_DOMAIN_test-share": "WORKGROUP",
   "DTOOL_SMB_PASSWORD_test-share": "a-guest-needs-no-password",
   "DTOOL_SMB_PATH_test-share": "dtool",
-  "DTOOL_SMB_SERVER_NAME_test-share": "10.20.49.250",
+  "DTOOL_SMB_SERVER_NAME_test-share": "132.230.223.113",
   "DTOOL_SMB_SERVER_PORT_test-share": 4445,
   "DTOOL_SMB_SERVICE_NAME_test-share": "sambashare",
   "DTOOL_SMB_USERNAME_test-share": "guest"

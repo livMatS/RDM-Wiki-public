@@ -1,6 +1,6 @@
 ## Finding a dataset
 
-A testing [lookup server](https://10.20.49.250) makes datasets placed on `s3://test-bucket` and `smb://test-share` 
+A testing lookup server makes datasets placed on `s3://test-bucket` and `smb://test-share` 
 searchable. The searchable index is accessible via 
 a graphical user interface [dtool-lookup-gui](https://github.com/IMTEK-Simulation/dtool-lookup-gui),
 a command line interface [dtool-lookup-client](https://github.com/jic-dtool/dtool-lookup-client), 
@@ -11,7 +11,7 @@ via
 
 ```console
 $ dtool query '{}'
-Authentication URL https://10.20.49.250:5001/token password:
+Authentication URL https://132.230.223.113:5001/token password:
 [
   {
     "base_uri": "smb://test-share",
