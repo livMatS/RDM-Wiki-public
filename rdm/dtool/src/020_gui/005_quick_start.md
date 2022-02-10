@@ -166,11 +166,39 @@ It is designed to be both machine-processible but also human-readible. For that 
 
 Worth mentioning at this point is the `manifest.json`.
 
-![.dtool/README.txt content](./img/350_dataset_manifest_content.png)
+![.dtool/manifest.json content](./img/350_dataset_manifest_content.png)
 
 It holds size and checksums of all items at the point of freezing, making any illegal tempering with the items of the frozen dataset immediately noticeable.
 
 For more information on the structure of a dataset, refer to the software authors' [publication](https://peerj.com/articles/6562/#) [^2].
+
+### Search for a dataset
+
+Copy your frozen dataset to the `s3://test-bucket`,
+
+![Copy from local base URI to S3](./img/400_copy_from_local_base_uri_to_s3.png)
+
+and confirm it's there,
+
+![Copied dataset at S3 endpoint](./img/410_copied_dataset_at_s3_endpoint.png)
+
+Depending on the server's configuration, it will register new datasets immediately or just at certain time intervals. After that has happened, the dataset will appear on the `Lookup server` dataset list,
+
+![New dataset in index](./img/500_new_dataset_in_index.png)
+
+The lookup server makes the dataset discoverable by its administrative and descriptive metadata. A search query may be plain text ad aim at content of the `README.yml`, i.e.
+
+![.dtool/README.txt content](./img/510_text_search.png)
+
+or formulated more specifically to aim at certain fields of the `README.yml`,   
+
+![.dtool/README.txt content](./img/520_mongo_search.png)
+
+To understand more about the possibilities for sophisticated querying, continue reading [Finding a dataset](../030_cli/050_search.md).
+
+### Reporting issues
+
+Please report any issues with the dtool lookup GUI at https://github.com/IMTEK-Simulation/dtool-lookup-gui/issues, any issues with this documentation at https://github.com/livMatS/RDM-Wiki-public/issues, or to [data@livmats.uni-freibur.de](mailto:data@livmats.uni-freiburg.de). Thank you.
 
 Note that datasets on the testing storage locations used hera are 
 **readable globally** by anyone, **not deletable** once deposited there, 
