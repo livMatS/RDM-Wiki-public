@@ -50,6 +50,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            dtool-guidelines-latest.pdf
-            dtool-guidelines-${{ steps.get_version.outputs.version }}.pdf
+            /tmp/dtool-pdf/dtool-guidelines-latest.pdf
+            /tmp/dtool-pdf/dtool-guidelines-${{ steps.get_version.outputs.version }}.pdf
           draft: true
