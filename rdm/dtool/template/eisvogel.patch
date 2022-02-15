@@ -1,0 +1,11 @@
+--- eisvogel.latex.bkp	2022-02-15 16:21:41.912577991 +0100
++++ eisvogel.latex	2022-02-15 17:44:25.656732671 +0100
+@@ -601,6 +601,8 @@
+ \usepackage[font={stretch=1.2}, textfont={color=caption-color}, position=top, skip=4mm, labelfont=bf, singlelinecheck=false, justification=$if(caption-justification)$$caption-justification$$else$raggedright$endif$]{caption}
+ \setcapindent{0em}
+ $endif$
++\DeclareCaptionFormat{empty}{}
++\captionsetup{format=empty}
+ 
+ %
+ % blockquote
