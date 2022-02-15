@@ -95,7 +95,11 @@ Download the [README.yml](https://raw.githubusercontent.com/livMatS/RDM-Wiki-pub
 
 Adapt it to your needs in a text editor.
 
-Open your `.config/dtool/dtool.json` in a text editor and point the `DTOOL_README_TEMPLATE_FPATH` entry to your `README.yml` template:
+Point the GUI to this template at the bottom of settings dialog
+
+![Open readme template](./img/207_open_readme_template.png)
+
+or just open your `.config/dtool/dtool.json` in a text editor and point the `DTOOL_README_TEMPLATE_FPATH` entry to your `README.yml` template:
 
 ![Modify dtool.json](./img/210_modify_dtool_json.png)
 
