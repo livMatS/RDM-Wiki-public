@@ -1,6 +1,6 @@
 ## Funders
 
-### livMatS
+### *liv*MatS
 
 Suggested YAML entries for funding via _livMatS:.
 
