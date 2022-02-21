@@ -21,6 +21,11 @@ jobs:
       - build-dtool-pdf
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
       - name: Get version
         id: get_version
         uses: battila7/get-version-action@v2
