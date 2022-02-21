@@ -41,6 +41,9 @@ jobs:
 
       - name: Prepare and pack release assets
         run: |
+          cp rdm/dtool/samples/dtool-external.json /tmp/dtool-pdf/dtool.json
+          cp rdm/dtool/samples/dtool_readme.yml /tmp/dtool-pdf/dtool_readme.yml
+
           cd /tmp/dtool-pdf
           mv output.pdf dtool-guidelines-latest.pdf
           cp dtool-guidelines-latest.pdf dtool-guidelines-${{ steps.get_version.outputs.version }}.pdf
@@ -50,6 +53,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
+            /tmp/dtool-pdf/dtool.json
+            /tmp/dtool-pdf/dtool_readme.yml
             /tmp/dtool-pdf/dtool-guidelines-latest.pdf
             /tmp/dtool-pdf/dtool-guidelines-${{ steps.get_version.outputs.version }}.pdf
           draft: true
