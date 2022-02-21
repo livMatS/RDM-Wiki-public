@@ -21,6 +21,7 @@ Open the main menu by clicking the *burger* menu in the upper right corner and s
 
 Download the sample configuration for a testing server instance at
 [`dtool.json`](https://github.com/livMatS/RDM-Wiki-public/releases/latest/download/dtool.json).
+
 ![Sample dtool.json](./img/032_download_dtool_json_save_as.png)
 
 Import it via the *import* in the *settings* dialog
