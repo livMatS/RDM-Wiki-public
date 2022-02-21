@@ -2,9 +2,9 @@
 
 A testing lookup server makes datasets placed on `s3://test-bucket` and `smb://test-share` 
 searchable. The searchable index is accessible via 
-a graphical user interface [dtool-lookup-gui](https://github.com/IMTEK-Simulation/dtool-lookup-gui),
+a graphical user interface [dtool-lookup-gui](https://github.com/livMatS/dtool-lookup-gui),
 a command line interface [dtool-lookup-client](https://github.com/jic-dtool/dtool-lookup-client), 
-as well as a Python interface [dtool-lookup-api](https://github.com/IMTEK-Simulation/dtool-lookup-api).
+as well as a Python interface [dtool-lookup-api](https://github.com/livMatS/dtool-lookup-api).
 
 The testing lookup server allows access via user `testuser` and password `test_password`. With the `dtool-lookup-client`, query all entries on the lookup server
 via 

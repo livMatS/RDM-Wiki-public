@@ -2,7 +2,7 @@
 
 ### Set-up
 
-Navigate to [https://github.com/IMTEK-Simulation/dtool-lookup-gui/releases](https://github.com/IMTEK-Simulation/dtool-lookup-gui/releases) and download the latest release zip file containing the dtool lookup gui for your OS (currently Windows and Linux offered).
+Navigate to [https://github.com/livMatS/dtool-lookup-gui/releases](https://github.com/livMatS/dtool-lookup-gui/releases) and download the latest release zip file containing the dtool lookup gui for your OS (currently Windows and Linux offered).
 
 Unpack the zip archive and launch the application. On a Linux machine, you will have to make the unpacked file executable first with
 
@@ -202,7 +202,7 @@ To understand more about the possibilities for sophisticated querying, continue 
 
 ### Reporting issues
 
-Please report any issues with the dtool lookup GUI at https://github.com/IMTEK-Simulation/dtool-lookup-gui/issues, any issues with this documentation at https://github.com/livMatS/RDM-Wiki-public/issues, or to [data@livmats.uni-freibur.de](mailto:data@livmats.uni-freiburg.de). Thank you.
+Please report any issues with the dtool lookup GUI at https://github.com/livMatS/dtool-lookup-gui/issues, any issues with this documentation at https://github.com/livMatS/RDM-Wiki-public/issues, or to [data@livmats.uni-freibur.de](mailto:data@livmats.uni-freiburg.de). Thank you.
 
 Note that datasets on the testing storage locations used hera are 
 **readable globally** by anyone, **not deletable** once deposited there, 
