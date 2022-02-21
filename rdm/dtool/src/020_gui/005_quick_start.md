@@ -2,7 +2,7 @@
 
 ### Set-up
 
-Navigate to [https://github.com/livMatS/dtool-lookup-gui/releases](https://github.com/livMatS/dtool-lookup-gui/releases) and download the latest release zip file containing the dtool lookup gui for your OS (currently Windows and Linux offered).
+Navigate to [https://github.com/livMatS/dtool-lookup-gui/releases](https://github.com/livMatS/dtool-lookup-gui/releases) and download the latest release zip file containing the dtool lookup gui for your OS.
 
 Unpack the zip archive and launch the application. On a Linux machine, you will have to make the unpacked file executable first with
 
@@ -20,8 +20,7 @@ Open the main menu by clicking the *burger* menu in the upper right corner and s
 ![Main menu](./img/015_main_menu.png)
 
 Download the sample configuration for a testing server instance at
-[`dtool.json`](https://raw.githubusercontent.com/livMatS/RDM-Wiki-public/master/rdm/dtool/samples/dtool-external.json).
-
+[`dtool.json`](https://github.com/livMatS/RDM-Wiki-public/releases/latest/download/dtool.json).
 ![Sample dtool.json](./img/032_download_dtool_json_save_as.png)
 
 Import it via the *import* in the *settings* dialog
@@ -91,7 +90,7 @@ The *Manifest* lists all items contained within the dataset. Click on *Show* to 
 
 ### Create a dataset
 
-Download the [README.yml](https://raw.githubusercontent.com/livMatS/RDM-Wiki-public/master/rdm/dtool/samples/dtool_readme.yml) template.
+Download the [`README.yml`](https://github.com/livMatS/RDM-Wiki-public/releases/latest/download/dtool_readme.yml) template.
 
 ![Download readme template](./img/200_download_readme_template.png)
 
