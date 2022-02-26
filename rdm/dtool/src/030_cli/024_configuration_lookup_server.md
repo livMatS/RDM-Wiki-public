@@ -41,5 +41,5 @@ A complete configuration file may look like this:
 }
 ```
 
-You can download this sample [`dtool.json`](../../samples/dtool-external.json)
+You can download this sample [`dtool.json`](../../samples/dtool-livmats-testing.json)
 and modify it according to your needs.

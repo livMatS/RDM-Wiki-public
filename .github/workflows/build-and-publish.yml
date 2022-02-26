@@ -46,7 +46,7 @@ jobs:
 
       - name: Prepare and pack release assets
         run: |
-          cp rdm/dtool/samples/dtool-external.json /tmp/dtool-pdf/dtool.json
+          cp rdm/dtool/samples/dtool-livmats-testing.json /tmp/dtool-pdf/dtool.json
           cp rdm/dtool/samples/dtool_readme.yml /tmp/dtool-pdf/dtool_readme.yml
 
           cd /tmp/dtool-pdf
