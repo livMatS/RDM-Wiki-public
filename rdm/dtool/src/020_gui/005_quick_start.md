@@ -1,14 +1,24 @@
 ## Quick start
 
+Note that datasets placed on the testing storage locations within this guide are 
+**readable globally** by anyone, **not deletable** once deposited there, 
+**not backed up**, and may disappear at any time.
+
+### Reporting issues
+
+Please report any issues with the dtool lookup GUI at https://github.com/livMatS/dtool-lookup-gui/issues, any issues with this documentation at https://github.com/livMatS/RDM-Wiki-public/issues, or to [data@livmats.uni-freibur.de](mailto:data@livmats.uni-freiburg.de). Thank you.
+
 ### Set-up
 
 Navigate to [https://github.com/livMatS/dtool-lookup-gui/releases](https://github.com/livMatS/dtool-lookup-gui/releases) and download the latest release zip file containing the dtool lookup gui for your OS.
 
-Unpack the zip archive and launch the application. On a Linux machine, you will have to make the unpacked file executable first with
+Unpack the zip archive and launch the application. On a Linux or MacOS machine, you will have to make the unpacked file executable first with a 
 
 ```bash
 chmod +x dtool-lookup-gui
 ```
+
+in the terminal.
 
 When you launch the GUI for the first time,
 it may look quite empty:
@@ -190,7 +200,7 @@ Depending on the server's configuration, it will register new datasets immediate
 
 ![New dataset in index](./img/500_new_dataset_in_index.png)
 
-The lookup server makes the dataset discoverable by its administrative and descriptive metadata. A search query may be plain text ad aim at content of the `README.yml`, i.e.
+The lookup server makes the dataset discoverable by its administrative and descriptive metadata. A search query may be plain text to aim at content of the `README.yml`, i.e.
 
 ![.dtool/README.txt content](./img/510_text_search.png)
 
@@ -199,14 +209,6 @@ or formulated more specifically to aim at certain fields of the `README.yml`,
 ![.dtool/README.txt content](./img/520_mongo_search.png)
 
 To understand more about the possibilities for sophisticated querying, continue reading [Finding a dataset](../030_cli/050_search.md).
-
-### Reporting issues
-
-Please report any issues with the dtool lookup GUI at https://github.com/livMatS/dtool-lookup-gui/issues, any issues with this documentation at https://github.com/livMatS/RDM-Wiki-public/issues, or to [data@livmats.uni-freibur.de](mailto:data@livmats.uni-freiburg.de). Thank you.
-
-Note that datasets on the testing storage locations used hera are 
-**readable globally** by anyone, **not deletable** once deposited there, 
-**not backed up**, and may disappear at any time.
 
 [^1]: T. S. G. Olsson and M. Hartley, “Lightweight data management with dtool,” PeerJ, vol. 7, p. e6562, Mar. 2019, doi: [10.7717/peerj.6562](https://doi.org/10.7717/peerj.6562).
 

@@ -10,8 +10,10 @@ When new to `dtool` and impatient, look at the
 * Introduction
   * [Datasets](rdm/dtool/src/010_general/020_datasets.md)
   * [Metadata](rdm/dtool/src/010_general/030_metadata.md)
+  * [Funders](rdm/dtool/src/010_general/040_funders.md)
+  * [dtool](rdm/dtool/src/010_general/050_dtool.md)
 * Using the graphical user interface
-  * work in progress
+  * [Quick start guide](rdm/dtool/src/020_gui/005_quick_start.md)
 * Using the command line interface
   * [Quick start guide](rdm/dtool/src/030_cli/005_quick_start.md)
   * [Basic configuration](rdm/dtool/src/030_cli/020_configuration.md)
