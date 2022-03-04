@@ -1,27 +1,32 @@
 ## Quick start
 
 Note that datasets placed on the testing storage locations within this guide are 
-**readable globally** by anyone, **not deletable** once deposited there, 
+**readable globally** by anyone, **not deletable** once deposited there,
 **not backed up**, and may disappear at any time.
 
 ### Reporting issues
 
-Please report any issues with the dtool lookup GUI at https://github.com/livMatS/dtool-lookup-gui/issues, any issues with this documentation at https://github.com/livMatS/RDM-Wiki-public/issues, or to [data@livmats.uni-freibur.de](mailto:data@livmats.uni-freiburg.de). Thank you.
+Please report any issues with the dtool lookup GUI at
+https://github.com/livMatS/dtool-lookup-gui/issues,
+any issues with this documentation at
+https://github.com/livMatS/RDM-Wiki-public/issues, or to
+[data@livmats.uni-freibur.de](mailto:data@livmats.uni-freiburg.de).
+
+When reporting an issue, please include information on your OS, the version
+information available within the GUI's *About* dialog, and debug log ouptput if
+possible. The `dtool-lookup-gui` offers a logging window. Open it by a click on
+*logging* within the "burger" menu. Switch the loglevel to `DEBUG`, go ahead
+with the actions that lead to the problem you want to report, save the logging
+output to file, and append that log when reporting the issue. Thank you.
 
 ### Set-up
 
-Navigate to [https://github.com/livMatS/dtool-lookup-gui/releases](https://github.com/livMatS/dtool-lookup-gui/releases) and download the latest release zip file containing the dtool lookup gui for your OS.
-
-Unpack the zip archive and launch the application. On a Linux or MacOS machine, you will have to make the unpacked file executable first with a 
-
-```bash
-chmod +x dtool-lookup-gui
-```
-
-in the terminal.
-
-When you launch the GUI for the first time,
-it may look quite empty:
+Navigate to [https://github.com/livMatS/dtool-lookup-gui/releases](https://github.com/livMatS/dtool-lookup-gui/releases)
+and download the latest release zip file containing the dtool lookup gui for
+your OS. Minimum requirements are macOS 10.15, Windows 10, Ubuntu 20.04 or
+comparably recent Linux distribution. Unpack the zip archive and launch the
+application. When you launch the GUI for the first time, it may look quite
+empty:
 
 ![Clean start](./img/010_clean_start.png)
 
@@ -204,7 +209,7 @@ The lookup server makes the dataset discoverable by its administrative and descr
 
 ![.dtool/README.txt content](./img/510_text_search.png)
 
-or formulated more specifically to aim at certain fields of the `README.yml`,   
+or formulated more specifically to aim at certain fields of the `README.yml`,
 
 ![.dtool/README.txt content](./img/520_mongo_search.png)
 
