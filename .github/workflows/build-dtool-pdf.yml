@@ -24,7 +24,7 @@ jobs:
     steps:
 
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     # 2021-12-01: as of today, root on host maps to runner in workflow, evoking user on host maps to runneradmin
     #             group docker in workflow maps back to gtoup input on host
