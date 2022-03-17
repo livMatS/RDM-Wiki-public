@@ -5,7 +5,7 @@ Within this wiki, the development of RDM best practice guidelines takes place.
 ## dtool
 
 When new to `dtool` and impatient, look at the 
-[Quick start guide](rdm/dtool/src/030_cli/005_quick_start.md) below first.
+[GUI quick start guide](rdm/dtool/src/020_gui/005_quick_start.md) below first.
 
 * Introduction
   * [Datasets](rdm/dtool/src/010_general/020_datasets.md)
