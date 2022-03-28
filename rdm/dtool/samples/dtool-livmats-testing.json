@@ -1,8 +1,8 @@
 {
-  "DTOOL_LOOKUP_SERVER_TOKEN_GENERATOR_URL": "https://livmats-data.vm.uni-freiburg.de:5101/token",
-  "DTOOL_LOOKUP_SERVER_URL": "https://livmats-data.vm.uni-freiburg.de:5100",
+  "DTOOL_LOOKUP_SERVER_TOKEN_GENERATOR_URL": "https://livmats-data.vm.uni-freiburg.de:4443/token",
+  "DTOOL_LOOKUP_SERVER_URL": "https://livmats-data.vm.uni-freiburg.de:4443/lookup",
   "DTOOL_LOOKUP_SERVER_USERNAME": "testuser",
-  "DTOOL_LOOKUP_SERVER_VERIFY_SSL": "false",
+  "DTOOL_LOOKUP_SERVER_VERIFY_SSL": "true",
 
   "DTOOL_README_TEMPLATE_FPATH": "/path/to/.dtool_readme.yml",
 
