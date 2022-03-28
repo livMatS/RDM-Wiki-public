@@ -207,13 +207,22 @@ Depending on the server's configuration, it will register new datasets immediate
 
 The lookup server makes the dataset discoverable by its administrative and descriptive metadata. A search query may be plain text to aim at content of the `README.yml`, i.e.
 
-![.dtool/README.txt content](./img/510_text_search.png)
+![Text search](./img/510_text_search.png)
 
 or formulated more specifically to aim at certain fields of the `README.yml`,
 
-![.dtool/README.txt content](./img/520_mongo_search.png)
+![Mongo search](./img/520_mongo_search.png)
 
 To understand more about the possibilities for sophisticated querying, continue reading [Finding a dataset](../030_cli/050_search.md).
+
+### Browse repository from anywhere
+
+*liv*MatS offers a simple web app to explore the content of s3://test-bucket in
+your browser. Visit [https://livmats-data.vm.uni-freiburg.de:4443](https://livmats-data.vm.uni-freiburg.de:4443) and
+log in with `testuser` and `test_password`. You should see a few datasets,
+among them your creation:
+
+![dtool-lookup-webapp](./img/600_dtool_lookup_webapp.png)
 
 [^1]: T. S. G. Olsson and M. Hartley, “Lightweight data management with dtool,” PeerJ, vol. 7, p. e6562, Mar. 2019, doi: [10.7717/peerj.6562](https://doi.org/10.7717/peerj.6562).
 
