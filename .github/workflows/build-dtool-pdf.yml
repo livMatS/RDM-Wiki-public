@@ -106,7 +106,7 @@ jobs:
 
     - name: Upload artifact
       if: ${{ !env.ACT }}
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: dtool-pdf
         path: rdm/dtool/build/output.pdf
