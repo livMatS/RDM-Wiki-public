@@ -35,7 +35,7 @@ jobs:
           mkdir -p /tmp/dtool-pdf
 
       - name: Download dtool pdf
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: dtool-pdf
           path: /tmp/dtool-pdf
